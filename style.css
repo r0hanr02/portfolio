@@ -33,8 +33,27 @@ body{
 #title{
     font-size: 30px; 
 }
-
-#menu{
+#Main {
+    position: relative;
+    display: inline-block;
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+}
+#Main::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color:#fc326b;
+    bottom: -5px;
+    left: 0;
+    animation: lineMove 2s linear infinite;
+}
+@keyframes lineMove {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
 }
 #menu ul{
     display: flex;
@@ -91,8 +110,9 @@ body{
 .middle-part{
     background-color: black;
     margin-top: 350px;
-    margin-left: 100px;
+    margin-left: 150px;
     display: flex;
+    align-items: center;
 }
 #semore{
     color: white;
