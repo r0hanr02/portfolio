@@ -5,8 +5,5 @@ const btn= document.getElementById("btn1")
 
 text1.textContent
 btn.addEventListener("click",()=>{
-    alert(`
-        Name : ${text1.value}
-        Email : ${text2.value}
-        Query : ${text3.value}`)
+    ReportBody.st
 })
