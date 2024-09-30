@@ -233,7 +233,8 @@ body{
     overflow: hidden; /* To prevent overflow of sliding content */
 }
 
-.services .box img:hover{transition: 0.5s;
+.services .box img:hover{
+    transition: 0.5s;
     transform: translateY(-10px);
 }
 
