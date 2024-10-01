@@ -3,7 +3,8 @@ const text2= document.getElementById("t2")
 const text3= document.getElementById("t3")
 const btn= document.getElementById("btn1")
 
-text1.textContent
-btn.addEventListener("click",()=>{
-    ReportBody.st
+btn.addEventListener("submit",(e)=>{
+    alert(`${text1.value} your form is Submitted`)
+    e.preventDefault()
+    
 })

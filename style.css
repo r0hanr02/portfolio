@@ -25,6 +25,7 @@ body{
     position: relative;
     background-size: cover;
 }
+
 .navbar{
     background-color: black;
     display: flex;
@@ -57,7 +58,24 @@ body{
 }
 .hero-position{
     margin-top: 200px;
-    margin-left: 20%
+    margin-left: 20%;
+    position:relative;
+    display: inline-block;   
+}
+.hero-position::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color:#fc326b;
+    bottom: -5px;
+    left: 0;
+    animation: lineMove 2s linear infinite;
+}
+@keyframes lineMove {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
 }
 .hero-text{
     font-size: 2rem;
@@ -235,6 +253,7 @@ body{
     margin: 10px;
     padding:10px;
     width: 70%;
+    color: black;
 }
 .contact-form button{
     margin: 10px;
@@ -266,6 +285,12 @@ body{
     .hero-position{
         margin-left: 10%;
         margin-top: 10%;
+        font-size: 35px;
+        margin: 20px;
+        padding: 20px;
+    }
+    .hero-position::after {
+        content: none; /* Disable the underline animation */
     }
     #hero{
         height: 200px;
@@ -305,7 +330,7 @@ body{
         display: flex;
     }
     #footer{
-        margin: 0%;
+        margin: 10%;
     }
 }
 /*  */
@@ -324,6 +349,7 @@ body{
     .hero-position{
         margin-left: 10%;
         margin-top: 10%;
+        
     }
     #hero{
         height: 200px;
