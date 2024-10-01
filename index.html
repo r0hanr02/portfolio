@@ -3,128 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>PORTFOLIO-WEBSITE</title>
     <link rel="icon" type="image/png" href="/portfolio/icons/coder.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <div class="container1">
-            <div class="navBar">
-                <h1><span id="title"style="color: #E87595;">R</span>ohan.</h1>
-                <div id="menu">
-                    <ul>
-                        <li><a href="/portfolio/index.html">Home</a></li>
-                        <li><a href="#h1">About</a></li>
-                        <li><a href="#h2">Projects</a></li>
-                        <li><a href="#h3">Services</a></li>
-                        <li><a href="#h4">Contact</a></li>
-                        <li><a href="#h5">for Any Query</a></li>
-                    </ul>
-                </div>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar-title" id="title"><span class="navbar-title" style="color: #dd3565;">R</span>ohan.</div>
+        <div class="navbar-menu" id="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <section class="hero-position">
+            <div class="hero-text">Front-End Developer</div>
+        <div class="hero-text"  id="main-heading">Hi,I'm <span style="color: #dd3565; font-size: 3rem;">Rohan Rathod</span></div>
+        </section>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="about-container">
+            <img src="/portfolio/IV IMG (432) copy.jpg" alt="Profile Picture" class="profile-image">
+            <div class="about-text">
+                <h2>About Me.</h2>
+                <p>Hi, I'm a passionate Front-End Developer with a strong focus on creating clean, efficient, and user-friendly websites and applications.With expertise in HTML, CSS, JavaScript, and React, I love transforming complex ideas into interactive and responsive web experiences.</p>
+                <p>I have a keen eye for design and a deep understanding of web standards, ensuring that every project I work on is not only aesthetically 
+                    pleasing but also optimized for performance. I enjoy solving challenging problems and staying updated with the latest trends in web development 
+                    to continuously improve my skills.</p>
+                <p>When I'm not coding, you’ll find me exploring new technologies, collaborating with other developers, or contributing to open-source projects. 
+                    Let’s build something great together!</p>
             </div>
-            <div class="homepage">
-                <h2 id="Main" >Front-End Developer </h2>
-               <h1>Hi, I'm <span id="change" style="color: #E87595;">Rohan Rathod</span></h1>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2><span style="color: #dd3565; font-size: 2rem;">My</span> Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <img src="/portfolio/icons/portfolio-website (1).png" alt="Project 1">
+                <h3>PORTFOLIO</h3>
+                <p class="description">"Showcase of my projects, skills, and experience. A simple, responsive portfolio for web development and design work."</p>
             </div>
-        </div> 
-        <!-- ---------------------------------------About MR -- -->
+            <div class="project-item">
+                <img src="/portfolio/icons/code-optimisation.png" alt="Project 2">
+                <h3>CODERIDE</h3>
+                <p class="description">"A CodeRide offering an interactive platform for developers to write, test, and showcase HTML, CSS, and JavaScript projects."</p>
+            </div>
+        </div>
+        <button class="button-primary">See More...</button>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>My Services</h2>
+        <div class="services-list">
+            <div class="service-item">
+                <img src="/portfolio/icons/html (1).png" alt="HTML Icon">HTML
+                <div class="service-description">HTML  Lorem ipsum dolor sit amet consectetur elit. Eum, ab!</div>
+            </div>
+            <div class="service-item">
+                <img src="/portfolio/icons/css-file.png" alt="CSS Icon">CSS
+                <div class="service-description">CSS Lorem ipsum dolor sit amet consectetur elit. Eum, ab!</div>
+            </div>
+            <div class="service-item">
+                <img src="/portfolio/icons/js-file-format.png" alt="JS Icon">JS
+                <div class="service-description">JS Lorem ipsum dolor sit amet consectetur elit. Eum, ab!</div>
+            </div>
+            <div class="service-item">
+                <img src="/portfolio/icons/react.png" alt="REACT Icon">REACT
+                <div class="service-description">React Lorem ipsum dolor sit amet consectetur elit. Eum, ab!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
         
-            <div class="middle-part">
-                <img id="img" src="IV IMG (432) copy.jpg" alt="">
-                <div class="opt">
-                        <a href="aboutme"><h1 id="h1" style="color: #E87595;">A<span>bout Me.</span></h1></a>
-                        <p class="para"> Hi, I'm a passionate Front-End Developer with a strong focus on creating clean, efficient, and user-friendly websites and applications.With expertise in HTML, CSS, JavaScript, and React, I love transforming complex ideas into interactive and responsive web experiences.</p>
-                        <p class="para">I have a keen eye for design and a deep understanding of web standards, ensuring that every project I work on is not only aesthetically 
-                            pleasing but also optimized for performance. I enjoy solving challenging problems and staying updated with the latest trends in web development 
-                            to continuously improve my skills.</p>
-                        <p class="para">When I'm not coding, you’ll find me exploring new technologies, collaborating with other developers, or contributing to open-source projects. 
-                            Let’s build something great together!</p>
-                    </div>
-            </div>
-            <!-- My projects -->
-            <div class="pro">
-                <h1 id="h2"><span style="color: #E87595;">MY </span>PROJECTS</h1>
-            <div class="project">
-               <div class="box1">
-                   <a href=""><img id="portfolio" src="/portfolio/icons/portfolio-website (1).png" alt=""></a>
-                   <div class="local"></div>
-                   <h1>PORTFOLIO-WEBSITE</h1>
-                   <p class="description">"Showcase of my projects, skills, and experience. A simple, responsive portfolio for web development and design work."</p>
-               </div>
-               <div class="box1">
-                   <a href=""><img id="code" src="/portfolio/icons/code-optimisation.png" alt=""></a>
-                   <div class="local"></div>
-                   <h1>CODERIDE-CLONE</h1>
-                   <p class="description">"A CodeRide offering an interactive platform for developers to write, test, and showcase HTML, CSS, and JavaScript projects."</p>
-               </div>    
-           </div>
-            </div>
-            <!-- seemore button -->
-             <div class="seemore">
-                <a href="/portfolio/index.html"><button id="semore" type="reset">See More...</button></a>
-             </div>
+        <div>
+            <h2>Contact Me</h2>
+            <ul class="social-handle">
+                <li ><img id="Call" src="/portfolio/img/call.png" alt="call"><p>0123456789</p></li>
+                <li ><img id="Email" src="/portfolio/img/mail.png" alt="email"><p>example123@gmail.com</p></li>
+                <li class="logo" >
+                <a href="https://www.instagram.com/roh.anr28/?utm_source=qr&igsh=MWsxa3YxM3F4MjIzcQ%3D%3D"><img id="instagram-logo" src="/portfolio/img/instagram (2).png" alt="instagram-logo"></a>
+                <a href="https://x.com/rathodrohan721?t=uEAecrJNK0YYWwG7k_H6_w&s=08"><img id="twitter-logo" src="/portfolio/img/twitter.png" alt="twitter-logo"></a>
+                <a href="https://www.linkedin.com/in/rohan-rathod-b6a2a5284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img id="linkedin-logo" src="/portfolio/img/linkedin.png" alt="linkedin-logo"></a>
+                <a href="https://github.com/r0hanr02"><img id="github-logo" src="/portfolio/img/github.png" alt="github-logo"></a>
+            </li>
+            </ul>
+        </div>
 
-             <!-- -----------------Services-------------------- -->
-              <div class="serv">
-                <h1 id="h3"><span style="color: #ffffff;">MY</span> SERVICES</h1>
-             <div class="services">
-                <div class="box">
-                    <img id="html" src="/portfolio/icons/html (1).png" alt="">
-                    <div class="local"></div>
-                    <h1>HTML</h1>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ea sed, cupiditate aliquam dolores tempora recusandae deleniti dolore temporibus alias.</p>
-                </div>
-                <div class="box">
-                    <img id="css" src="/portfolio/icons/css-file.png" alt="">
-                    <div class="local"></div>
-                    <h1>CSS</h1>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ea sed, cupiditate aliquam dolores tempora recusandae deleniti dolore temporibus alias.</p>
-                </div>
-                    
-                <div class="box">
-                    <img id="js" src="/portfolio/icons/js.png" alt="">
-                    <div class="local"></div>
-                    <h1>JS</h1>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ea sed, cupiditate aliquam dolores tempora recusandae deleniti dolore temporibus alias.</p>
-                </div>
-                <div class="box">
-                    <img id="react" src="/portfolio/icons/react.png" alt="">
-                    <div class="local"></div>
-                    <h1>REACT</h1>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ea sed, cupiditate aliquam dolores tempora recusandae deleniti dolore temporibus alias.</p>
-                </div>
-            </div>
-              </div>
+        <form class="contact-form">
+            <h2>Query Here</h2>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-             <!-- ------------------Contacts------------------------ -->
-            <div class="main-contacts">
-                <ul class="menu">
-                    <h1 id="h4"><span style="color: #E87595;">C</span>ontact Me.</h1>
-                    <li>
-                        <img id="Phone" src="/portfolio/img/call.png"></img> Phone : <span class="imp"> 00123456789</span>
-                    </li>
-                    <li>
-                        <img id="Email"  src="/portfolio/img/mail.png"></img> Email : <span class="imp"> rathodrohan721@gmail.com</span>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/roh.anr28?utm_source=qr&igsh=MWsxa3YxM3F4MjIzcQ=="><img class="icons" src="/portfolio/img/instagram (2).png"></a>
-                        <a href="https://x.com/rathodrohan721?t=uEAecrJNK0YYWwG7k_H6_w&s=08"><img class="icons" src="/portfolio/img/twitter.png"></a>
-                        <a href="https://www.linkedin.com/in/rohan-rathod-b6a2a5284"><img class="icons" src="/portfolio/img/linkedin.png"></a>
-                        <a href="https://github.com/r0hanr02"><img class="git" src="/portfolio/img/github.png"></a>
-                    </li>   
-                </ul>
-                <form action=""id="form">
-                    <h1 id="h5">For Queries</h1>
-                    <input id="t1" type="text" placeholder="Your Name">
-                    <input id="t2"type="text" placeholder="Your Email">
-                    <textarea name="Your Message" id="t3" placeholder="Your Query"></textarea>
-                    <button id="btn1" >Submit</button>
-                 </form>
-            </div>
-            <!-- ----------footer------------ -->
-            <footer id="footer">
-                <p>Made Purely By Rohan!External Parties are not involved except ChatGPT</p>
-            </footer>
+    <!-- Footer Section -->
+    <footer id="footer">
+        <p>&copy; 2024 My Website. All Rights Reserved.</p>
+    </footer>
+
 </body>
-<script src="script.js"></script>
 </html>
