@@ -24,7 +24,7 @@ darkbtn.addEventListener("click",()=>{
         check = 1;
     } else {
         console.log("dark mode off");
-        document.body.style.backgroundImage =  "url('/portfolio/twoimage.jpg')"; // Revert to no background image
+        document.body.style.backgroundImage =  "url('/portfolio/twoimage.jpg')"; 
         image.src = "/portfolio/icons/light-mode.png";
         darkbtn.style.background="black"
         image.style.filter="invert()"

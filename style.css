@@ -297,78 +297,128 @@ body{
     justify-content: center;
 }
 /* for small phones */
-@media screen and (min-width: 0px) and (max-width: 600px){
+@media screen and (min-width: 0px) and (max-width: 600px) {
     .navbar {
         display: flex;
         flex-direction: column;
-        position: relative;
-        padding: 0;
+        align-items: center;
+        padding: 10px;
         font-size: 1rem;
+        position: relative;
     }
+
     .navbar-menu {
-        visibility:hidden;
+        visibility: hidden; 
     }
-    .hero-position{
-        margin-left: 10%;
-        margin: 20px;
-    }
-    .hero-position::after {
-        content: none; /* Disable the underline animation */
-    }
-    .hero-text,.hero-text span{
-        font-size: 2rem !important;
-    }
-    #hero{
-        height: 200px;
-        width: inherit;
-    }
-    .about-container{
+
+    /* Hero Section Styles */
+    .hero-position {
+        margin: 20px auto;
+        width: 90%; 
         display: flex;
         flex-direction: column;
-        margin:0;
-        padding: 10px;
-    }
-    .about-text{
-        width: 80%;
-    }
-    .project-list{
-        display: flex;
-        flex-direction: column;
-    }
-    .profile-image {
-        padding: 10px;
-        margin: 10px;
-        border-radius: 50px;
-    }
-    .services{
-        margin: 10px;
-    }
-    .services-list {
-        display: flex;
-        flex-direction: column;
-    }
-    #contact{
-        margin: 10px ;
-        display: flex;
-        flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
     }
+    .hero-position::after { 
+        content: none;
+    }
+
+    .hero-text, .hero-text span {
+        font-size: 2rem !important;
+        text-align: center; 
+    }
+
+    #hero {
+        height: 200px;
+        width: 100%;
+    }
+
+   
+    .about {
+        width: 100vw; 
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 10px;
+        align-items: center; 
+    }
+
+    .about-text {
+        width: 90%; 
+        text-align: center; 
+    }
+  
+    .project-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        margin: 10px 0; 
+        text-align: center; 
+    }
+
+    .profile-image {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 50%;
+    }
+
+    .services {
+        margin: 10px;
+    }
+
+    .services-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        margin: 10px 0; 
+        text-align: center; 
+    }   
+    #contact {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+    }
+
     .contact-form {
         padding: 10px;
         margin: 10px;
-        width: 80%;
+        width: 90%; 
     }
-    .social-handle li{
-        margin:0;
+
+   
+    .social-handle {
         display: flex;
+        flex-direction: column; 
+        align-items: center; 
     }
-    #footer{
+
+    .social-handle li {
+        margin: 5px 0; 
         display: flex;
-    align-items: center;
-    justify-content: center;
+        align-items: center; 
+    }
+
+
+    #footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
     }
 }
+
 /* For laptop and desktop */
 @media screen and (min-width: 601px) and (max-width: 768px) {
     .navbar {
