@@ -6,6 +6,7 @@
     font-size: 1.25rem;
     scroll-behavior: smooth;
     text-align: justify;
+    box-sizing: border-box;
 }
 *::selection{
     color: #f26c92;
@@ -25,6 +26,8 @@ body{
     background-position: center;
     position: relative;
     background-size: cover;
+    overflow-x: hidden;
+    margin: 0;
 }
 .navbar{
     background-color: black;
@@ -298,66 +301,61 @@ body{
 }
 /* for small phones */
 @media screen and (min-width: 0px) and (max-width: 600px) {
-    body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
     .navbar {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         padding: 10px;
         font-size: 1rem;
-        position: relative;
+        /* position: relative; */
     }
 
     .navbar-menu {
-        visibility: hidden; 
+        visibility: hidden;
     }
 
-    /* Hero Section Styles */
     .hero-position {
-        margin: 20px auto;
-        width: 90%; 
+        margin-top:30% ;
+        margin-left: 0px;
+        /* width: 90%; */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .hero-position::after { 
+    .hero-position::after{
         content: none;
     }
 
     .hero-text, .hero-text span {
         font-size: 2rem !important;
-        text-align: center; 
+        text-align: center;
     }
+    
 
     #hero {
         height: 200px;
         width: 100%;
     }
 
-   
-    .about {
-        width: 100vw; 
+    #about {
+        width: 100vw;
     }
 
     .about-container {
         display: flex;
         flex-direction: column;
-        margin: 0;
+        justify-content: center;
+        margin: 5px;
         padding: 10px;
-        align-items: center; 
+        align-items: center;
     }
 
     .about-text {
-        width: 90%; 
-        text-align: center; 
+        width: 90%;
+        text-align: center;
     }
-  
+
     .project-list {
         display: flex;
         flex-direction: column;
@@ -365,18 +363,23 @@ body{
     }
 
     .project-item {
-        margin: 10px 0; 
-        text-align: center; 
+        margin: 10px 0;
+        text-align: center;
     }
 
     .profile-image {
         padding: 10px;
         margin: 10px;
         border-radius: 50%;
+        /* width: 80%;
+        max-width: 150px; */
     }
-
     .services {
+        width: 100%;
         margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .services-list {
@@ -386,36 +389,36 @@ body{
     }
 
     .service-item {
-        margin: 10px 0; 
-        text-align: center; 
-    }   
+        margin: 10px 0;
+        text-align: center;
+    }
+
     #contact {
         margin: 10px;
         display: flex;
         flex-direction: column-reverse;
-        align-items: center; 
-        justify-content: center;
+        align-items: center;
+        justify-content: start;
     }
 
     .contact-form {
         padding: 10px;
         margin: 10px;
-        width: 90%; 
+        width: 90%;
     }
 
-   
     .social-handle {
         display: flex;
-        flex-direction: column; 
-        align-items: start; 
+        flex-direction: column;
+        align-items: start;
+       
     }
-
     .social-handle li {
-        margin: 5px 0; 
+        margin: 5px 0;
         display: flex;
-        align-items: center; 
+        align-items: center;
+        justify-content: start;
     }
-
 
     #footer {
         display: flex;
