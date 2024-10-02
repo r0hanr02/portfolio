@@ -299,26 +299,14 @@ body{
 /* for small phones */
 @media screen and (min-width: 0px) and (max-width: 600px){
     .navbar {
-        background-color: black;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        position: relative;
         padding: 0;
         font-size: 1rem;
     }
-    #title{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgb(8, 8, 8); 
-        z-index: 1000; 
-        padding: 10px; 
-        box-shadow: 0 4px 2px -2px gray; 
-    }
     .navbar-menu {
-        visibility: hidden;
+        visibility:hidden;
     }
     .hero-position{
         margin-left: 10%;
@@ -326,6 +314,9 @@ body{
     }
     .hero-position::after {
         content: none; /* Disable the underline animation */
+    }
+    .hero-text,.hero-text span{
+        font-size: 2rem !important;
     }
     #hero{
         height: 200px;
@@ -383,13 +374,12 @@ body{
     .navbar {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        position: relative;
         padding: 0;
         font-size: 1rem;
     }
     .navbar-menu {
-        visibility: hidden;
+        /* visibility: hidden; */
     }
     .hero-position{
         margin-left: 10%;
@@ -449,8 +439,7 @@ body{
     .navbar {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        position: relative;
         padding: 0;
         font-size: 1rem;
     }
@@ -459,8 +448,7 @@ body{
     }
     .hero-position{
         margin-left: 10%;
-        margin-top: 10%;
-        
+        margin-top: 10%; 
     }
     #hero{
         height: 200px;
