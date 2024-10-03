@@ -31,3 +31,52 @@ darkbtn.addEventListener("click",()=>{
         check = 0;
     }}
 )
+
+let skills = document.querySelector("#skills")
+let content = document.querySelector("#content")
+
+skills.addEventListener("onclick",()=>{
+    console.log("hello");
+    content.innerHTML +=`
+    <li>
+        <span>Web Developer
+        </span>
+        <br>"building Website"
+    </li>
+    <li>
+        <span>UI/UX</span>
+        <br>
+        "Design Web User-Friendly Interface"
+    </li>`
+})
+
+function toggle(){
+    event.preventDefault();
+    let content = document.querySelector("#content")
+    content.innerHTML +=`
+    <li>
+        <span>Web Developer
+        </span>
+        <br>"building Website"
+    </li>
+    <li>
+        <span>UI/UX</span>
+        <br>
+        "Design Web User-Friendly Interface"
+    </li>
+    `
+}
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+
+    document.getElementById(tabname).classList.add("active-tab")
+}

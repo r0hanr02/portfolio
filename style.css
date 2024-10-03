@@ -135,6 +135,60 @@ body{
     font-weight: bold;
     color: #dd3565;
 }
+.skills-title{
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5px;
+    padding: 5px;
+}
+.links{
+    color: #dd323e;
+}
+
+.tab-title{
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+.tab-links{
+    color: white;
+    margin-right: 50px;
+    /* font-size: 18px; */
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width:0;
+    height: 3px;
+    background: #ff1cc2 ;
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width:50%
+}
+.tab-contents ul li{
+    list-style: none;
+    margin:10px 0;
+}
+.tab-contents ul li span{
+    color: #dd3565;
+}
+
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
 /* My PROJECTS */
 #projects{
     margin: 10% 5% 10% 5%;
@@ -300,7 +354,6 @@ body{
 @media screen and (min-width: 0px) and (max-width: 600px) {
     body{
         width: 100vw;
-
     }
     .navbar {
         display: flex;
@@ -332,8 +385,6 @@ body{
         font-size: 2rem !important;
         text-align: center;
     }
-    
-
     #hero {
         height: 200px;
         width: 100%;
@@ -356,7 +407,15 @@ body{
         width: 90%;
         text-align: center;
     }
-
+    .tab-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .tab-links{
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
     .project-list {
         display: flex;
         flex-direction: column;
@@ -436,9 +495,6 @@ body{
         padding: 0;
         font-size: 1rem;
     }
-    .navbar-menu {
-        /* visibility: hidden; */
-    }
     .hero-position{
         margin-left: 10%;
         margin-top: 10%;
@@ -500,9 +556,6 @@ body{
         position: relative;
         padding: 0;
         font-size: 1rem;
-    }
-    .navbar-menu {
-        /* visibility: hidden; */
     }
     .hero-position{
         margin-left: 10%;
