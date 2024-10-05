@@ -6,8 +6,6 @@ document.querySelector('.contact-form').addEventListener('submit', function (e) 
     if (name === "" || email === "" || message === "") {
         alert("All fields are required!");
         e.preventDefault();  // Prevents form submission
-    } else {
-        alert("Message sent successfully!");
     }
 });
 
