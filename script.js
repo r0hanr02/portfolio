@@ -15,15 +15,15 @@ let check = 0
 darkbtn.addEventListener("click",()=>{
     if (check == 0) {
         console.log("dark mode on");
-        document.body.style.backgroundImage = "url('/portfolio/icons/12 (4).jpg')";
-        image.src = "/portfolio/icons/user-interface.png";
+        document.body.style.backgroundImage = "url('/icons/12 (4).webp')";
+        image.src = "/icons/user-interface.webp";
         darkbtn.style.background="white"
         image.style.filter="none"
         check = 1;
     } else {
         console.log("dark mode off");
-        document.body.style.backgroundImage =  "url('/portfolio/twoimage.jpg')"; 
-        image.src = "/portfolio/icons/light-mode.png";
+        document.body.style.backgroundImage =  "url('/twoimage.webp')"; 
+        image.src = "/icons/light-mode.webp";
         darkbtn.style.background="black"
         image.style.filter="invert()"
         check = 0;
