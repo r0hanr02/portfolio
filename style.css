@@ -67,14 +67,14 @@ body{
     color: black;
     background-color: #212121;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid ;
 }
 
 #dark-image{
-    filter: invert();
-    height: 15px;
-    width: 15px;
-    margin: 5px;
+    /* filter: invert(); */
+    height: 25px;
+    width: 25px;
+    margin: 5px ;
     padding: 5px;  
 }
 #hero{

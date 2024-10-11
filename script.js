@@ -16,16 +16,16 @@ darkbtn.addEventListener("click",()=>{
     if (check == 0) {
         console.log("dark mode on");
         document.body.style.backgroundImage = "url('/icons/12 (4).webp')";
-        image.src = "/icons/user-interface.webp";
+        image.src = "/icons/dark_mode_512dp.webp";
         darkbtn.style.background="white"
         image.style.filter="none"
         check = 1;
     } else {
         console.log("dark mode off");
         document.body.style.backgroundImage =  "url('/twoimage.webp')"; 
-        image.src = "/icons/light-mode.webp";
+        image.src = "/icons/light_mode_512.webp";
         darkbtn.style.background="#212121"
-        image.style.filter="invert()"
+        image.style.filter="none"
         check = 0;
     }}
 )
