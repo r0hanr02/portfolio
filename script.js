@@ -24,7 +24,7 @@ darkbtn.addEventListener("click",()=>{
         console.log("dark mode off");
         document.body.style.backgroundImage =  "url('/twoimage.webp')"; 
         image.src = "/icons/light-mode.webp";
-        darkbtn.style.background="black"
+        darkbtn.style.background="#212121"
         image.style.filter="invert()"
         check = 0;
     }}
