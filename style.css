@@ -399,6 +399,7 @@ h3{
         width: 100%;
     }
     #NAvi{
+        /* width: %; */
         display: flex;
         flex-direction: column;
     }
@@ -406,19 +407,11 @@ h3{
         width: 100%;
     }
     .navbar{
-        padding: 0 0;
+        padding: 0 ;
     }
-    #menu{
-        font-size: ;
-        
+    #menu ul li{
+        padding: 0px;
     }
-    #menu button{
-        margin-left: 100%;
-    }
-    .navbar-menu ul {
-        /* visibility: hidden; */
-    }
-
     .hero-position {
         margin-top:30% ;
         margin-left: 0px;
@@ -468,7 +461,11 @@ h3{
         font-size: 0.75rem;
         font-weight: bold;
     }
+    #projects{
+        width: 90%;
+    }
     .project-list {
+        width: 100$;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -484,13 +481,8 @@ h3{
         margin: 10px;
         border-radius: 20%;
     }
-    .services {
-        width: 100%;
-        margin: 10px;
-        display: flex;
-        align-items: center;
-        border-radius: 0px;
-
+    #services {
+        width: 90%;        
     }
 
     .services-list {
@@ -500,7 +492,7 @@ h3{
     }
 
     .service-item {
-        width: 70%;
+        width: 65%;
         margin: 10px 0;
         text-align: justify;
     }
@@ -537,6 +529,12 @@ h3{
         align-items: center;
         justify-content: start;
         padding: 10px;
+    }
+    #Call,#Email,#github-logo,#twitter-logo,#instagram-logo,#linkedin-logo{
+        height: 25px;
+        width: 25px;
+        margin: 5px;
+        padding: 5px;
     }
 }
 
