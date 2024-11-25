@@ -25,24 +25,33 @@ body{
     background-position: center;
     position: relative;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.navbar{
-    background-color: black;
+#NAvi{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+
+}
+.navbar{
+    width: 90%;
+    position: sticky;
+    top: 5px;
+    border-radius: 10px;
+    background-color: royalblue;
     z-index: 1000; 
-    padding: 10px; 
+    padding: 0 20px;
+}
+main{
+    width: 90%;
 }
 #menu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 #menu ul{
     display: flex;
@@ -113,7 +122,8 @@ body{
 }
 /* about ME section */
 #about{
-    background-color: black;
+    padding-top: 5%;
+    background-color: rgb(0, 0, 0);
     width: 100%;
 }
 .about-container{
@@ -194,6 +204,7 @@ body{
 }
 /* My PROJECTS */
 #projects{
+    padding-top: 5%;
     margin: 10% 5% 10% 5%;
     display: flex;
     flex-direction: column;
@@ -212,11 +223,12 @@ body{
     transform: translateY(10px);
 }
 .project-list{
-    display: grid;
+    display: flex;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     justify-items: center;
-    align-items: center;
+    align-items: center; */
     
 }
 .project-item{
@@ -228,9 +240,10 @@ body{
     padding: 20px;
     background-color: rgb(90, 87, 87);
     border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);;
 }
 .project-item:hover{
-    background-color: #dd3565;
+    background-color: royalblue;
     transform: translateY(-10px);
     transition: 0.5s;
 }
@@ -242,7 +255,7 @@ h3{
     padding: 5px;
 }
 .button-primary{
-    border: 2px solid #dd3565;
+    border: 2px solid royalblue;
     background-color: black;
     margin: 10px;
     padding: 20px;
@@ -251,19 +264,17 @@ h3{
 .button-primary:hover{
     transition: 0.5s;
     transform: translateY(10px);
-    background-color: #dd3565;
+    background-color: royalblue;
 }
 /* SERVICES */
 #services{
-    padding: 5% 5% 5% 5%;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: center;
-    background-color: #dd3565;
+    text-align: center;
+    padding: 10px;
+    background-color: royalblue;
     border-radius: 20px;
 }
 #services h2{
+    text-align: center;
     font-size: 2rem;
 }
 .service-item img{
@@ -272,22 +283,25 @@ h3{
 }
 .services-list{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .service-item{
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin: 30px;
     padding: 20px;
     background-color: rgb(90, 87, 87);
     border-radius: 20px;
+    box-shadow:0 5px 10px 10px rgba(0, 0, 0, 1.1), 0 5px 0px 5px rgba(0, 0, 0, 0.06);
 }
 .service-item:hover{
+    box-shadow: 0 10px 15px 15px rgba(0, 0, 0, 1), 0 8px 5px 8px rgba(0, 0, 0, 0.1);
     background-color: black;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     transition: 0.5s;
 }
 .service-item *{
@@ -300,13 +314,13 @@ h3{
 }
 /* ---contact --- */
 #contact{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    margin: 5% 5% 2% 5%;
+    margin: 20px;
 
 }
 #contact h2,.contact-form h2{
@@ -327,6 +341,22 @@ h3{
     width: 50px;
     padding: 10px;
     margin: 10px;
+}
+#instagram-logo:hover{
+    transition: 0.5s;
+    transform: translateY(-10px);
+}
+#twitter-logo:hover{
+    transition: 0.5s;
+    transform: translateY(-10px);
+}
+#linkedin-logo:hover{
+    transition: 0.5s;
+    transform: translateY(-10px);
+}
+#github-logo:hover{
+    transition: 0.5s;
+    transform: translateY(-10px);
 }
 .contact-form{
     background-color: #f26c92;
@@ -355,40 +385,44 @@ h3{
     background-color: #dd3565;
 }
 #footer{
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 /* for small phones */
 @media screen and (min-width: 0px) and (max-width: 600px) {
-    body{
-        width: 100vw;
+    *{
+        font-size: 1em;
     }
-    .navbar {
+    body{
+        width: 100%;
+    }
+    #NAvi{
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        font-size: 1rem;
-        /* position: relative; */
+        flex-direction: column;
+    }
+    main{
+        width: 100%;
+    }
+    .navbar{
+        padding: 0 0;
     }
     #menu{
-        display: flex;
+        font-size: ;
+        
     }
     #menu button{
         margin-left: 100%;
     }
-
-
     .navbar-menu ul {
-        visibility: hidden;
+        /* visibility: hidden; */
     }
 
     .hero-position {
         margin-top:30% ;
         margin-left: 0px;
-        /* width: 90%; */
+        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -408,6 +442,7 @@ h3{
     }
 
     #about {
+        
         width: 100vw;
     }
 
@@ -454,25 +489,27 @@ h3{
         margin: 10px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        border-radius: 0px;
+
     }
 
     .services-list {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .service-item {
+        width: 40%;
         margin: 10px 0;
-        text-align: center;
+        text-align: justify;
     }
 
     #contact {
         margin: 10px;
         display: flex;
         flex-direction: column-reverse;
-        align-items: center;
+        align-items: start;
         justify-content: start;
     }
 
@@ -489,7 +526,7 @@ h3{
        
     }
     .social-handle li {
-        margin: 5px 0;
+        /* margin: 5px 0; */
         display: flex;
         align-items: center;
         justify-content: start;
@@ -498,7 +535,7 @@ h3{
     #footer {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         padding: 10px;
     }
 }
@@ -535,6 +572,14 @@ h3{
     .about-text{
         width: 80%;
     }
+    .service-item {
+        width: 80%;
+        margin: 10px 0;
+        text-align: justify;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .profile-image {
         padding: 10px;
         margin: 10px;
@@ -548,6 +593,7 @@ h3{
     }
     .services{
         margin: 10px;
+        border-radius: 0%;
     }
     .services-list {
         display: grid;
@@ -580,6 +626,10 @@ h3{
         padding: 0;
         font-size: 1rem;
     }
+    #NAvi{
+        display: flex;
+        flex-direction: column;
+    }
     .hero-position{
         margin-left: 10%;
         margin-top: 10%; 
@@ -604,11 +654,12 @@ h3{
     }
     .services{
         margin: 10px;
+        border-radius: 0%;
     }
     .services-list {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
-        grid-gap: 20px; /* Adds some space between grid items */
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
         justify-items: center; /* Centers items horizontally in their grid cell */
         align-items: center; /* Centers items vertically in their grid cell */
     }
@@ -623,7 +674,9 @@ h3{
     }
     #footer{
         display: flex;
-    align-items: center;
-    justify-content: center;
+        align-items: center;
+        justify-content: center;
     }
-}
+    .service-item{
+        width: 90%;
+    }

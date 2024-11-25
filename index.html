@@ -11,12 +11,12 @@
 
     <!-- Navbar Section -->
     <nav class="navbar">
-        <div class="navbar-title" id="title"><span class="navbar-title" style="color: #dd3565;">R</span>ohan.</div>
-        <div class="navbar-menu" id="menu">
-            <button class="dark-mode"><img src="/icons/light_mode_512.webp" alt="light-mode" id="dark-image"></button>
-
+        <div id="NAvi">
+            <div class="navbar-title" id="title"><span class="navbar-title" style="color: #dd3565;">R</span>ohan.</div>
+            <div class="navbar-menu" id="menu">
+            <!-- <button class="dark-mode"><img src="/icons/light_mode_512.webp" alt="light-mode" id="dark-image"></button> -->
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li> 
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#services">Services</a></li>
@@ -24,10 +24,11 @@
             </ul>
             
         </div>
+        </div>
         
     </nav>
-
-    <!-- Hero Section -->
+    <main>
+           <!-- Hero Section -->
     <section id="hero">
         <section class="hero-position">
             <div class="hero-text">Front-End Developer</div>
@@ -40,31 +41,32 @@
         <div class="about-container">
             <img src="/user.webp" alt="Profile Picture" class="profile-image">
             <div class="about-text">
-                <h2>About Me.</h2>
-                <p>Hi, I'm a passionate Front-End Developer with a strong focus on creating clean, efficient, and user-friendly websites and applications. With expertise in HTML, CSS, JavaScript, and React, I love transforming complex ideas into interactive and responsive web experiences.</p>
-                <div class="tab-title">
-                    <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                 </div>
-                 <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Web Developer</span> <br>Building Websites</li>
-                        <li><span>UI/UX</span> <br>Design Web Interface</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>Fresher</span> <br>Starting A new Journey</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>HSC</span> <br>Ramnarain Ruia Autonomous College</li>
-                        <li><span>2021-Current</span> <br>Bachelors Of Science in IT From Mulund College Of Commerce</li>
-                    </ul>
-                </div>
-            </div>
+            <h2>About Me.</h2>
+            <p>Hi, I'm a passionate Front-End Developer with a strong focus on creating clean, efficient, and user-friendly websites and applications. With expertise in HTML, CSS, JavaScript, and React, I love transforming complex ideas into interactive and responsive web experiences.</p>
+            <div class="tab-title">
+        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+        <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+        <p class="tab-links" onclick="opentab('education', event)">Education</p>
+    </div>
+    <div class="tab-contents active-tab" id="skills">
+        <ul>
+            <li><span>Web Developer</span> <br>Building Websites</li>
+            <li><span>UI/UX</span> <br>Design Web Interface</li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="experience">
+        <ul>
+            <li><span>Fresher</span> <br>Starting A new Journey</li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="education">
+        <ul>
+            <li><span>HSC</span> <br>Ramnarain Ruia Autonomous College</li>
+            <li><span>2021-Current</span> <br>Bachelors Of Science in IT From Mulund College Of Commerce</li>
+        </ul>
+    </div>
+</div>
+
         </div>
     </section>
 
@@ -105,31 +107,44 @@
         <div class="services-list">
             <div class="service-item">
                 <img src="/icons/html (1).webp" alt="HTML Icon">HTML
-                <div class="service-description">HTML  Lorem ipsum dolor sit amet consectetur elit. Eum, ab!</div>
+                <div class="service-description">HTML (HyperText Markup Language) is the standard language used to structure and display content on the web.</div>
             </div>
             <div class="service-item">
                 <img src="/icons/css-file.webp" alt="CSS Icon">CSS
-                <div class="service-description">CSS Lorem ipsum dolor sit amet consectetur elit. Eum, ab!</div>
+                <div class="service-description">"CSS (Cascading Style Sheets) is used to style HTML elements, controlling layout, colors, fonts, and overall presentation of a webpage."</div>
             </div>
             <div class="service-item">
                 <img src="/icons/js-file-format.webp" alt="JS Icon">JS
-                <div class="service-description">JS Lorem ipsum dolor sit amet consectetur elit. Eum, ab!</div>
+                <div class="service-description">"JavaScript is a versatile scripting language used to create dynamic and interactive web applications."</div>
             </div>
             <div class="service-item">
                 <img src="/icons/react.webp" alt="REACT Icon">REACT
-                <div class="service-description">React Lorem ipsum dolor sit amet consectetur elit. Eum, ab!</div>
+                <div class="service-description">"React is a powerful JavaScript library for building dynamic and interactive user interfaces efficiently using reusable components."</div>
+            </div>
+            <div class="service-item">
+                <img src="/icons/7413eb389b7360e1c6f96a8114995989.webp" alt="UIUX Icon">UI/UX
+                <div class="service-description">"Crafting seamless and visually engaging user experiences that delight and inspire."</div>
+            </div>
+            <div class="service-item">
+                <img src="/icons/ai (2).webp" alt="AI Icon">AI
+                <div class="service-description">"AI: Transforming ideas into innovation, intelligence, and endless possibilities."</div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+ 
+
+    </main>
+    <!-- Footer Section -->
+    <footer id="footer">
+           <!-- Contact Section -->
     <section id="contact">
         
         <div>
             <h2>Contact Me</h2>
             <ul class="social-handle">
-                <li ><img id="Call" src="/img/call.webp" alt="call"><p>0123456789</p></li>
-                <li ><img id="Email" src="/img/mail.webp" alt="email"><p>example123@gmail.com</p></li>
+                <li ><img id="Call" src="/img/call.webp" alt="call"><p>9326760159</p></li>
+                <li ><img id="Email" src="/img/mail.webp" alt="email"><p>rrathod4476@gmail.com</p></li>
                 <li class="logo" >
                 <a href="https://www.instagram.com/roh.anr28/?utm_source=qr&igsh=MWsxa3YxM3F4MjIzcQ%3D%3D"><img id="instagram-logo" src="/img/instagram (2).webp" alt="instagram-logo"></a>
                 <a href="https://x.com/rathodrohan721?t=uEAecrJNK0YYWwG7k_H6_w&s=08"><img id="twitter-logo" src="/img/twitter.webp" alt="twitter-logo"></a>
@@ -147,12 +162,9 @@
             <button id="btn1">Send Message</button>
         </form>
     </section>
-
-    <!-- Footer Section -->
-    <footer id="footer">
-        <p>&copy; 2024 My Website. All Rights Reserved.</p>
-    </footer>
+</footer>
+<p>&copy; 2024 My Website. All Rights Reserved.</p>
 
 </body>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </html>
