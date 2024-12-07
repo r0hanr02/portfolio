@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/webp" href="/icons/coder.webp">
+    <link rel="stylesheet" href="/dist/output.css">
+    <style>
+      *{
+        scroll-behavior: smooth;
+      }
+        /* Custom CSS for Tab Highlighting */
+        .tab-contents {
+          display: none;
+        }
+      
+        .tab-contents.active-tab {
+          display: block;
+        }
+      
+        .tab-links.active-link {
+          color: #78462B; /* Tailwind equivalent color */
+          font-weight: bold;
+        }
+      </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav id="navbar" class="sticky top-0 z-50 bg-custom-secondaryDark text-custom-light p-4 flex items-center justify-between">
+      <!-- Brand Section -->
+      <div class="text-3xl font-bold underline">Rohan.</div>
+    
+      <!-- Navbar Links -->
+      <ul id="navbar-links" class="fixed top-0 right-[-100%] w-72 h-full text-xl md:text-lg bg-custom-secondaryAccent flex flex-col gap-6 items-center justify-start transition-all duration-300 ease-in-out md:relative md:right-0 md:flex-row md:bg-transparent md:w-auto md:h-auto md:gap-0">
+        <li><a href="#" class="hover:bg-white hover:text-custom-secondaryAccent rounded-lg p-2 menu-item">Home</a></li>
+        <li><a href="#about" class="hover:bg-white hover:text-custom-secondaryAccent rounded-lg p-2 menu-item">About</a></li>
+        <li><a href="#projects" class="hover:bg-white hover:text-custom-secondaryAccent rounded-lg p-2 menu-item">Projects</a></li>
+        <li><a href="#services" class="hover:bg-white hover:text-custom-secondaryAccent rounded-lg p-2 menu-item">Services</a></li>
+        <li><a href="#contact" class="hover:bg-white hover:text-custom-secondaryAccent rounded-lg p-2 menu-item">Contact</a></li>
+      </ul>
+    
+      <!-- Menu Icon -->
+      <img src="/icons/menu.webp" class="block md:hidden w-10 h-10 invert" alt="Menu Icon" id="menu-icon">
+    </nav>
+    
+    
+    
+
+    <main class="bg-custom-light text-custom-dark font-sans min-h-screen flex items-center justify-center" >
+        <section class="bg-white max-w-7xl  mx-auto flex flex-col-reverse md:flex-row items-center p-20 shadow-2xl ">
+            <!-- Left Section: Text -->
+            <div class="text-left space-y-4 md:w-1/2">
+              <h1 class="text-4xl md:text-5xl font-extrabold text-custom-secondaryAccent">
+                Hi, I'm Rohan Rathod!
+              </h1>
+              <p class="text-xl md:text-2xl text-custom-dark">
+                I am a passionate <span class="text-custom-accent font-semibold">Front-End Web Developer</span>.
+              </p>
+              <p class="text-md md:text-lg text-custom-dark">
+                I love creating responsive, user-friendly, and dynamic websites.
+              </p>
+              <button class="bg-custom-accent text-custom-dark px-6 py-2 rounded-lg text-lg hover:bg-custom-secondaryAccent hover:text-custom-light transition">
+                Download My CV
+              </button>
+            </div>
+        
+            <!-- Right Section: Image -->
+            <div class="md:w-1/2 flex justify-center">
+              <img src="/img/user.webp" alt="Rohan's Image" class="rounded-full shadow-lg w-64 md:w-80">
+            </div>
+          </section>
+    </main>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-custom-light to-white ">
+        <div class="max-w-7xl mx-auto px-6">
+          <!-- About Text Section -->
+          <div class="text-center md:text-left space-y-8 reveal">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-custom-secondaryAccent mb-6">About Me</h2>
+            <p class="text-xl md:text-2xl text-custom-dark mb-6">
+              Hi, I'm Rohan, a passionate Front-End Developer with a deep interest in creating clean, efficient, and user-friendly websites and web applications. I have a strong focus on responsive design, ensuring that my work looks great on any device, from desktops to mobile phones.
+            </p>
+            <p class="text-lg md:text-xl text-custom-dark mb-8">
+              With expertise in HTML, CSS, JavaScript, and React, I specialize in transforming complex ideas into interactive and intuitive web experiences. I am driven by the challenge of improving usability, speed, and performance while maintaining clean, maintainable code.
+            </p>
+            <p class="text-lg md:text-xl text-custom-dark mb-6">
+              Whether it's building a fully-fledged web application or enhancing the design of a website, I aim to create solutions that help users navigate effortlessly and efficiently. I thrive in collaborative environments and constantly seek to learn and grow as a developer.
+            </p>
+            
+            <!-- Tabs -->
+            <div class="tab-title flex justify-center md:justify-start space-x-8 mb-8">
+              <p class="tab-links cursor-pointer active-link text-xl font-semibold text-custom-dark hover:text-custom-accent transition duration-300" onclick="opentab('skills', event)">Skills</p>
+              <p class="tab-links cursor-pointer text-xl font-semibold text-custom-dark hover:text-custom-accent transition duration-300" onclick="opentab('experience', event)">Experience</p>
+              <p class="tab-links cursor-pointer text-xl font-semibold text-custom-dark hover:text-custom-accent transition duration-300" onclick="opentab('education', event)">Education</p>
+            </div>
+      
+            <!-- Tab Contents -->
+            <div class="tab-contents active-tab mb-8" id="skills">
+              <ul class="list-disc pl-5 space-y-3 text-lg md:text-xl text-custom-dark">
+                <li><span class="font-semibold text-custom-accent">Web Developer</span> <br> Building responsive, user-friendly websites and applications.</li>
+                <li><span class="font-semibold text-custom-accent">UI/UX Designer</span> <br> Crafting seamless and visually appealing user interfaces.</li>
+                <li><span class="font-semibold text-custom-accent">JavaScript</span> <br> Writing dynamic and interactive code for websites and applications.</li>
+                <li><span class="font-semibold text-custom-accent">React</span> <br> Building fast and scalable web applications using React.js.</li>
+              </ul>
+            </div>
+            <div class="tab-contents mb-8" id="experience">
+              <ul class="list-disc pl-5 space-y-3 text-lg md:text-xl text-custom-dark">
+                <li><span class="font-semibold text-custom-accent">Fresher</span> <br> Starting my professional journey with a focus on building interactive and engaging web experiences.</li>
+                <li><span class="font-semibold text-custom-accent">InternShip</span> <br>Magic Bus Training Institute</li>
+              </ul>
+            </div>
+            <div class="tab-contents mb-8" id="education">
+              <ul class="list-disc pl-5 space-y-3 text-lg md:text-xl text-custom-dark">
+                <li><span class="font-semibold text-custom-accent">HSC</span> <br> Ramnarain Ruia Autonomous College</li>
+                <li><span class="font-semibold text-custom-accent">2021-Current</span> <br> Bachelors Of Science in IT, Mulund College Of Commerce</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gradient-to-b from-custom-light to-white ">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+          <h2 class="text-4xl md:text-5xl font-bold text-custom-secondaryAccent mb-12">
+            <span class="text-custom-accent">My</span> Projects
+          </h2>
+      
+          <!-- Project List -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 reveal">
+            <!-- Project Item 1 -->
+            <div class="project-item bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition duration-300">
+              <img src="/icons/portfolio-website (1).webp" alt="Project 1" class="w-full object-cover rounded-lg mb-6">
+              <h3 class="text-xl font-semibold text-custom-dark mb-2">
+                <a href="https://portfolio-kappa-three-15.vercel.app/" target="_blank" class="text-custom-accent font-bold hover:underline">PORTFOLIO</a>
+              </h3>
+              <p class="text-lg text-custom-dark">"Showcase of my projects, skills, and experience. A simple, responsive portfolio for web development and design work."</p>
+            </div>
+      
+            <!-- Project Item 2 -->
+            <div class="project-item bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition duration-300">
+              <img src="/icons/code-optimisation.webp" alt="Project 2" class="w-full object-cover rounded-lg mb-6">
+              <h3 class="text-xl font-semibold text-custom-dark mb-2">
+                <a href="https://coderidepro-p321.vercel.app/home/auth" target="_blank" class="text-custom-accent font-bold hover:underline">CODERIDE</a>
+              </h3>
+              <p class="text-lg text-custom-dark">"A CodeRide offering an interactive platform for developers to write, test, and showcase HTML, CSS, and JavaScript projects."</p>
+            </div>
+      
+            <!-- Project Item 3 -->
+            <div class="project-item bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition duration-300">
+              <img src="/icons/task_14979696.webp" alt="Project 3" class="w-full object-cover rounded-lg mb-6">
+              <h3 class="text-xl font-semibold text-custom-dark mb-2">
+                <a href="https://r0hanr02.github.io/todoList/" target="_blank" class="text-custom-accent font-bold hover:underline">To Do List</a>
+              </h3>
+              <p class="text-lg text-custom-dark">"A to-do list helps organize and prioritize tasks, enabling individuals to track and complete activities efficiently."</p>
+            </div>
+      
+            <!-- Uncomment to add more project -->
+            
+            <!-- <div class="project-item bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition duration-300">
+              <img src="/icons/game.webp" alt="Project 3" class="w-full h-48 object-cover rounded-lg mb-6">
+              <h3 class="text-xl font-semibold text-custom-dark mb-2">
+                <a href="https://r0hanr02.github.io/PoKeDex-using-FetchAPI/" target="_blank" class="text-custom-accent hover:underline">PoKeDex-using-FetchAPI</a>
+              </h3>
+              <p class="text-lg text-custom-dark">"PoKeDex-using-FetchAPI retrieves and displays Pokémon data from an API, allowing users to explore Pokémon details efficiently."</p>
+            </div> -->
+           
+          </div>
+      
+          <!-- See More Button -->
+          <div class="text-center mt-8">
+            <button class="button-primary py-2 px-6 text-lg font-semibold bg-custom-accent text-white rounded-lg hover:bg-custom-secondaryAccent transition duration-300">
+              See More...
+            </button>
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-b from-custom-light to-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+          <h2 class="text-4xl md:text-5xl font-bold text-custom-secondaryAccent mb-12">
+            <span class="text-custom-accent">My</span> Services
+          </h2>
+      
+          <!-- Services List -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 reveal">
+            <!-- Service Item 1: HTML -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+              <div class="service-icon mb-4">
+                <img src="/icons/html (1).webp" alt="HTML Icon" class="w-16 h-16 mx-auto" />
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-custom-secondaryAccent">HTML</h3>
+              <p class="text-gray-600">HTML (HyperText Markup Language) is the standard language used to structure and display content on the web.</p>
+            </div>
+      
+            <!-- Service Item 2: CSS -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+              <div class="service-icon mb-4">
+                <img src="/icons/css-file.webp" alt="CSS Icon" class="w-16 h-16 mx-auto" />
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-custom-secondaryAccent">CSS</h3>
+              <p class="text-gray-600">CSS (Cascading Style Sheets) is used to style HTML elements, controlling layout, colors, fonts, and overall presentation of a webpage.</p>
+            </div>
+      
+            <!-- Service Item 3: JavaScript -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+              <div class="service-icon mb-4">
+                <img src="/icons/js-file-format.webp" alt="JavaScript Icon" class="w-16 h-16 mx-auto" />
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-custom-secondaryAccent">JavaScript</h3>
+              <p class="text-gray-600">JavaScript is a versatile scripting language used to create dynamic and interactive web applications.</p>
+            </div>
+      
+            <!-- Service Item 4: React -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+              <div class="service-icon mb-4">
+                <img src="/icons/react.webp" alt="React Icon" class="w-16 h-16 mx-auto" />
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-custom-secondaryAccent">React</h3>
+              <p class="text-gray-600">React is a powerful JavaScript library for building dynamic and interactive user interfaces efficiently using reusable components.</p>
+            </div>
+      
+            <!-- Service Item 5: UI/UX Design -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+              <div class="service-icon mb-4">
+                <img src="/icons/7413eb389b7360e1c6f96a8114995989.webp" alt="UI/UX Icon" class="w-16 h-16 mx-auto" />
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-custom-secondaryAccent">UI/UX Design</h3>
+              <p class="text-gray-600">Crafting seamless and visually engaging user experiences that delight and inspire users on websites and applications.</p>
+            </div>
+      
+            <!-- Service Item 6: AI -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300">
+              <div class="service-icon mb-4">
+                <img src="/icons/ai (2).webp" alt="AI Icon" class="w-16 h-16 mx-auto" />
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-custom-secondaryAccent">AI</h3>
+              <p class="text-gray-600">Transforming ideas into innovation, intelligence, and endless possibilities using AI-driven solutions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Me Section -->
+      <section id="contact" class="py-20 bg-gradient-to-b from-custom-light to-white ">
+        <div class="max-w-7xl mx-auto px-6">
+          <h2 class="text-4xl md:text-5xl font-bold text-custom-secondaryAccent text-center mb-12">
+            Contact Me
+          </h2>
+      
+          <!-- Flex container for side-by-side layout -->
+          <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
+            <!-- Contact Form -->
+            <div class="w-full md:w-1/2 ">
+              <form class="contact-form p-6 bg-white shadow-lg rounded-lg reveal" action="https://script.google.com/macros/s/AKfycbwjn1Frfy8gEhOMuck5fXhMegpP-M6faa1VRr14PEWJHbBlUZq0J-VvXlMMvRBUqEbA/exec" method="post">
+                <h2 class="text-2xl font-semibold text-custom-secondaryAccent mb-4">Query Here</h2>
+                <input type="text" name="name" placeholder="Your Name" id="t1" required class="w-full p-4 mb-4 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-custom-accent"/>
+                <input type="email" name="email" placeholder="Your Email" id="t2" required class="w-full p-4 mb-4 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-custom-accent"/>
+                <textarea placeholder="Your Message" name="message" id="t3" required class="w-full p-4 mb-6 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-custom-accent"></textarea>
+                <button type="submit" id="btn1" class="w-full py-3 bg-custom-accent text-white font-semibold rounded-lg hover:bg-custom-secondaryAccent transition duration-200">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+</section>
+<!-- Footer Section with Social Media Links -->
+<footer class="m-0 p-0 md:mt-20 md:py-8 bg-custom-secondaryAccent text-white ">
+  <div class="mx-auto p-0 md:px-6 flex flex-col md:flex-row justify-between items-center ">
+    
+    <!-- Contact Information -->
+    <div class=" p-2 md:p-5 flex flex-col justify-center mb-6 md:mb-0">
+      <div class="flex items-center m-0 md:mb-4">
+        <img src="/img/call.webp" alt="call" class="w-8 h-8 invert m-3"/>
+        <p class="text-xl text-white m-3 font-bold">9326760159</p>
+      </div>
+      <div class="flex items-center">
+        <img src="/img/mail.webp" alt="email" class="w-8 h-8 invert m-3"/>
+        <p class="text-lg  md:text-xl text-white m-1 md:m-3 font-bold">rrathod4476@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <p class="font-bold text-sm flex md:text-left mb-0 md:mb-6 md:self-end md:m-0  ">&copy; 2024 My Website. All Rights Reserved.</p>
+
+    <!-- Social Media Links -->
+    <div class="p-5 flex flex-row items-center justify-center space-x-4 md:justify-end md:p-2">
+      <a href="https://www.instagram.com/roh.anr28/?utm_source=qr&igsh=MWsxa3YxM3F4MjIzcQ%3D%3D" class="hover:opacity-75" target="_blank" title="Instagram">
+        <img src="/img/instagram (2).webp" alt="Instagram" class="w-8 h-8 md:w-10 md:h-10 m-4 hover:scale-125 transition duration-300"/>
+      </a>
+      <a href="https://x.com/rathodrohan721?t=uEAecrJNK0YYWwG7k_H6_w&s=08" class="hover:opacity-75" target="_blank" title="Twitter">
+        <img src="/img/twitter.webp" alt="Twitter" class="w-8 h-8 md:w-10 md:h-10  m-4   hover:scale-125 transition duration-300"/>
+      </a>
+      <a href="https://www.linkedin.com/in/rohan-rathod-b6a2a5284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="hover:opacity-75" target="_blank" title="LinkedIn">
+        <img src="/img/linkedin.webp" alt="LinkedIn" class="w-8 h-8 md:w-10 md:h-10  m-4   hover:scale-125 transition duration-300"/>
+      </a>
+      <a href="https://github.com/r0hanr02" class="hover:opacity-75" target="_blank" title="GitHub">
+        <img src="/img/github.webp" alt="GitHub" class="w-8 h-8 md:w-10 md:h-10  m-4 hover:scale-125 transition duration-300"/>
+      </a>
+    </div>
+  </div>
+</footer>
+
+      
+      
+      
+        
+       
+</body>
+<script src="/script.js" defer></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+</html>
