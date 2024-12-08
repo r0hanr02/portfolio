@@ -7,13 +7,6 @@
     <link rel="icon" type="image/webp" href="../icons/coder.webp">
     <link rel="stylesheet" href="./output.css">
     <style>
-      body {
-        background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Consistent background */
-        color: #333; /* Text color */
-        font-family: sans-serif;
-        margin: 0;
-        padding: 0;
-      }
 
       *{
         scroll-behavior: smooth;
@@ -99,7 +92,8 @@
 
       </style>
 </head>
-<body>
+<!-- <body class="bg-gradient-to-b from-[#F0D2AD] via-white to-[#DCA87B]"> -->
+<body class="bg-gradient-to-l from-[#F0D2AD] via-white to-[#DCA87B] min-h-screen">
 
     <!-- Navbar Section -->
     <nav id="navbar" class="sticky top-0  z-50 bg-custom-secondaryDark text-custom-light p-4 flex items-center justify-between">
@@ -119,7 +113,7 @@
       <img src="../icons/menu.webp" class="block md:hidden w-10 h-10 invert" alt="Menu Icon" id="menu-icon">
     </nav>
     
-    <main class="bg-custom-light text-custom-dark font-sans min-h-screen flex items-center justify-center" >
+    <main class=" text-custom-dark font-sans min-h-screen flex items-center justify-center" >
         <section class="bg-white max-w-7xl  mx-auto flex flex-col-reverse md:flex-row items-center p-20 shadow-2xl ">
             <!-- Left Section: Text -->
             <div class="text-left space-y-4 md:w-1/2">
@@ -146,7 +140,7 @@
     </main>
 
     <!-- About Me Section -->
-    <section id="about" class="py-20 bg-gradient-to-b from-custom-light to-white ">
+    <section id="about" class="py-20  ">
         <div class="max-w-7xl mx-auto px-6">
           <!-- About Text Section -->
           <div class="text-center md:text-left space-y-8 reveal">
@@ -194,7 +188,7 @@
       </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gradient-to-b from-custom-light to-white ">
+    <section id="projects" class="py-20   ">
         <div class="max-w-7xl mx-auto px-6 text-center">
           <h2 class="text-4xl md:text-5xl font-bold text-custom-secondaryAccent mb-12">
             <span class="text-custom-accent">My</span> Projects
@@ -258,7 +252,7 @@
       
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-gradient-to-b from-custom-light to-white">
+    <section id="services" class="py-20 ">
         <div class="max-w-7xl mx-auto px-6 text-center">
           <h2 class="text-4xl md:text-5xl font-bold text-custom-secondaryAccent mb-12">
             <span class="text-custom-accent">My</span> Services
@@ -337,7 +331,7 @@
       </section>
 
       <!-- Contact Me Section -->
-      <section id="contact" class="py-20 bg-gradient-to-b from-custom-light to-white ">
+      <section id="contact" class="py-20  ">
         <div class="max-w-7xl mx-auto px-6">
           <h2 class="text-4xl md:text-5xl font-bold text-custom-secondaryAccent text-center mb-12">
             Contact Me
@@ -359,7 +353,7 @@
         </div>
       </section>
 <!-- Footer Section with Social Media Links -->
-<footer class="m-0 p-0 md:mt-0 md:p-5 bg-custom-secondaryAccent text-white ">
+<footer class="m-0 p-0 md:mt-0 md:p-5 bg-custom-secondaryDark text-custom-light ">
   <div class="m-auto p-0 flex flex-col md:flex-row justify-between items-center ">
     
     <!-- Contact Information -->
@@ -367,12 +361,12 @@
       <div class="flex items-center">
 
         <img src="./img/call.webp" alt="call" class="w-4 h-4 invert m-2 md:w-8 md:h-8"/>
-        <p class="text-sm md:text-lg text-white m-1 md:m-3  font-bold">9326760159</p>
+        <p class="text-sm md:text-lg text-custom-light m-1 md:m-3  font-bold">9326760159</p>
       </div>
       <div class="flex items-center">
         <img src="./img/mail.webp" alt="email" class="w-4 h-4 invert m-2 md:w-8 md:h-8"/>
 
-        <p class="text-sm md:text-lg text-white m-1 md:m-3 font-bold">rrathod4476@gmail.com</p>
+        <p class="text-sm md:text-lg text-custom-light m-1 md:m-3 font-bold">rrathod4476@gmail.com</p>
       </div>
     </div>
 
@@ -401,10 +395,6 @@
 </footer>
     
 </body>
-
 <script src="./script.js" defer></script>
-
-<script src="/portfolio/script.js" defer></script>
-
 <script src="https://unpkg.com/scrollreveal"></script>
 </html>

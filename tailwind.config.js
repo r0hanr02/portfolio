@@ -18,6 +18,7 @@ module.exports = {
         },
       },
       backgroundImage: {
+        'portfolio-gradient': 'linear-gradient(to right, #F0D2AD, #78462B, #DCA87B)',
         'gradient-to-b': 'linear-gradient(to bottom, var(--tw-gradient-stops))',
         'gradient-to-r': 'linear-gradient(to right, var(--tw-gradient-stops))',
       },
