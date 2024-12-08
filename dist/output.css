@@ -998,6 +998,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1152,6 +1157,20 @@ video {
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .sm\:md\:line-clamp-none {
+      overflow: visible;
+      display: block;
+      -webkit-box-orient: horizontal;
+      -webkit-line-clamp: none;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -1294,6 +1313,11 @@ video {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
