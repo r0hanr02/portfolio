@@ -31,17 +31,83 @@
           color: #78462B; /* Tailwind equivalent color */
           font-weight: bold;
         }
+/* Active menu item */
+.menu-item.active {
+   /* Set the active background color */
+  color: white; /* Set the active text color */
+}
+
+/* When the navbar is open on mobile */
+#navbar-links.right-0 {
+  right: 0; /* Menu slides in from the right */
+  transition: right 0.3s ease-in-out;
+}
+
+/* When the navbar is closed */
+#navbar-links {
+  right: -300px; /* Hide the menu offscreen */
+  transition: right 0.3s ease-in-out;
+}
+
+/* On mobile screens (smaller than `md`), position the navbar off-screen */
+#navbar-links {
+  right: -100%; /* Offscreen by default on mobile */
+  transition: right 0.3s ease-in-out;
+}
+
+/* When the menu is open on mobile (right-0 means it slides in) */
+#navbar-links.right-0 {
+  right: 0;
+}
+
+/* On larger screens (md and up), make the navbar display horizontally */
+@media (min-width: 768px) {
+  #navbar-links {
+    right: 0; /* Ensure the navbar is at the top and left of the page on larger screens */
+    position: relative; /* Remove fixed position on large screens */
+    display: flex; /* Display items in a row */
+    flex-direction: row; /* Align navbar items horizontally */
+    background-color: transparent; /* No background when in desktop view */
+    width: auto; /* Navbar items should have width as per their content */
+  }
+
+  #navbar-links.right-0 {
+    right: 0; /* Make sure the navbar is visible on desktop */
+  }
+}
+
+/* Add active state style for menu items */
+.menu-item.active {
+  /* background-color: #DCA87B; Active background color */
+  color: white; /* Active text color */
+}
+
+/* For the menu icon */
+#menu-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  /* Hide the menu icon on larger screens */
+  #menu-icon {
+    display: none;
+  }
+}
+
       </style>
 </head>
 <body>
 
     <!-- Navbar Section -->
-    <nav id="navbar" class="sticky top-0 z-50 bg-custom-secondaryDark text-custom-light p-4 flex items-center justify-between">
+    <nav id="navbar" class="sticky top-0  z-50 bg-custom-secondaryDark text-custom-light p-4 flex items-center justify-between">
       <!-- Brand Section -->
       <div class="text-3xl font-bold underline">Rohan.</div>
     
       <!-- Navbar Links -->
-      <ul id="navbar-links" class="fixed top-0 right-[-100%] w-72 h-full text-xl md:text-lg bg-custom-secondaryAccent flex flex-col gap-6 items-center justify-start transition-all duration-300 ease-in-out md:relative md:right-0 md:flex-row md:bg-transparent md:w-auto md:h-auto md:gap-0">
+      <ul id="navbar-links" class="fixed top-0 right-[-100%] w-72 h-full text-xl md:text-lg bg-custom-secondaryAccent flex flex-col gap-6 items-center justify-center transition-all duration-300 ease-in-out md:relative md:right-0 md:flex-row md:bg-transparent md:w-auto md:h-auto md:gap-0">
         <li><a href="#" class="hover:bg-white hover:text-custom-secondaryAccent rounded-lg p-2 menu-item">Home</a></li>
         <li><a href="#about" class="hover:bg-white hover:text-custom-secondaryAccent rounded-lg p-2 menu-item">About</a></li>
         <li><a href="#projects" class="hover:bg-white hover:text-custom-secondaryAccent rounded-lg p-2 menu-item">Projects</a></li>
@@ -50,14 +116,9 @@
       </ul>
     
       <!-- Menu Icon -->
-
       <img src="../icons/menu.webp" class="block md:hidden w-10 h-10 invert" alt="Menu Icon" id="menu-icon">
-
     </nav>
     
-    
-    
-
     <main class="bg-custom-light text-custom-dark font-sans min-h-screen flex items-center justify-center" >
         <section class="bg-white max-w-7xl  mx-auto flex flex-col-reverse md:flex-row items-center p-20 shadow-2xl ">
             <!-- Left Section: Text -->

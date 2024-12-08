@@ -47,15 +47,26 @@ const menuIcon = document.getElementById("menu-icon");
 const navbarLinks = document.getElementById("navbar-links");
 const menuItems = document.querySelectorAll(".menu-item");
 
-// Toggle the menu visibility on menu icon click
 menuIcon.addEventListener("click", () => {
-  const isMenuOpen = navbarLinks.style.right === "0px";
-  navbarLinks.style.right = isMenuOpen ? "-300px" : "0px";
+  // Toggle the navbar visibility (for mobile)
+  navbarLinks.classList.toggle("right-0");
+
+  // Add the active class to all menu items
+  menuItems.forEach((item) => {
+    item.classList.toggle("active");
+  });
 });
 
 // Close the menu when a menu item is clicked
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
-    navbarLinks.style.right = "-300px";
+    // Close the menu
+    navbarLinks.classList.remove("right-0");
+    
+    // Optionally, you can remove the active class from the items as well
+    menuItems.forEach((item) => {
+      item.classList.remove("active");
+    });
   });
 });
+
